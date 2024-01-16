@@ -27,7 +27,7 @@ class Solution:
                     # increment left to continue 2sum
                     left += 1
                     # to avoid duplicate triplets, jump to next number if it is same with the one before it
-                    # 
+                    # make sure the inner loop left pointer doesnt pass the right pointer 
                     while nums[left] == nums[left - 1] and left < right:
                         left += 1
         return result
