@@ -43,4 +43,8 @@ class Solution:
                     newStr = newStr[1:]
                 
         return max(maxVal,len(newStr))
+        
+        # 2 adjustments made to the first idea:
+        # 1- When a repeating char was found, added it to the end of the string
+        # 2- and started removing chars from left until cleaning all duplicates
                     
