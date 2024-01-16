@@ -36,17 +36,13 @@ class Solution:
         char_list = list(s)
         print(char_list)
         for i, c in enumerate(char_list):
-            if c!= ' ' and c not in newStr:
+            if c not in newStr:
                 newStr += c
             else:
                 maxVal = max(maxVal,len(newStr))
                 newStr += c
-                print("before")
-                print(newStr)
                 while newStr.count(c) > 1:
                     newStr = newStr[1:]
-                print("after")
-                print(newStr)
                 
         return max(maxVal,len(newStr))
                     
