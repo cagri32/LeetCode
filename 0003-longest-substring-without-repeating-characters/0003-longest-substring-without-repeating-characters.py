@@ -33,9 +33,7 @@ class Solution:
         
         maxVal = 0
         newStr = ""
-        char_list = list(s)
-        print(char_list)
-        for i, c in enumerate(char_list):
+        for c in s:
             if c not in newStr:
                 newStr += c
             else:
