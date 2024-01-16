@@ -8,10 +8,10 @@ class Solution:
             return False
         
         left, right = 0, len(s1) - 1
-        
+        s1Sorted = sorted(s1)
         while right <= len(s2):
             # now this is a palindrome question
-            if sorted(s1) == sorted(s2[left:right+1]):
+            if s1Sorted == sorted(s2[left:right+1]):
                 return True
             else:
                 left += 1
