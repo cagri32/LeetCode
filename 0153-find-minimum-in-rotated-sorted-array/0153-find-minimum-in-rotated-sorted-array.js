@@ -3,7 +3,6 @@
  * @return {number}
  */
 var findMin = function(nums) {
-    let result = nums[0];
     let l = 0, r = nums.length -1;
     
     while (l < r){
