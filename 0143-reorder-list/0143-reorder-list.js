@@ -19,17 +19,18 @@ var reorderList = function(head) {
         fast = fast.next.next
     }
     
-    // break the linked list
+    // break the linked list, second will be the HEAD the other half
+    // point the end of first to null
     let second = slow.next
     slow.next = null
     
     // reverse the second half linked list
     let prev = null
-    while (second){
-        let temp = second.next
-        second.next = prev
-        prev = second
-        second = temp
+    while (second) {
+        let temp = second.next;  // Store the next node in the original order
+        second.next = prev;      // Reverse the link to the previous node
+        prev = second;           // Move the previous pointer forward
+        second = temp;           // Move the second pointer forward
     }
     
     // merge 2 halves
