@@ -9,21 +9,13 @@ var reverseVowels = function(s) {
     let left = 0, right = s.length - 1;
 
     while (left < right) {
-        const leftCh = chars[left];
-        const rightCh = chars[right];
-
-        if (!vowelArr.has(leftCh)) {
+        if (!vowelArr.has(chars[left])) {
             left += 1;
-        }
-
-        if (!vowelArr.has(rightCh)) {
+        }else if (!vowelArr.has(chars[right])) {
             right -= 1;
-        }
-
-        if (vowelArr.has(rightCh) && vowelArr.has(leftCh)) {
+        }else {
             // Swap vowels in the array directly
             [chars[left], chars[right]] = [chars[right], chars[left]];
-
             // Move the pointers after swapping
             left += 1;
             right -= 1;
