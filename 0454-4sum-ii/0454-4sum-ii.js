@@ -14,7 +14,7 @@ var fourSumCount = function(nums1, nums2, nums3, nums4) {
   for (let num1 of nums1){
     for( let num2 of nums2){
       const sum = num1 + num2;
-      // Check if the sumAB key already exists in sumMap
+      // Check if the sum key already exists in sumMap
       // If it exists, get its current count; otherwise, default to 0
       const currentCount = sumMap.get(sum) || 0;
 
@@ -23,7 +23,7 @@ var fourSumCount = function(nums1, nums2, nums3, nums4) {
     }
   }
   
-    // Check for complement sums in arrays C and D
+    // Check for complement sums in arrays nums3 and nums4
     for (let num3 of nums3) {
         for (let num4 of nums4) {
             const complement = 0 - (num3 + num4);
