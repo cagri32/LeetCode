@@ -13,10 +13,6 @@ var uniqueOccurrences = function(arr) {
     let array = Object.values(occurences)
     let setOccurences = new Set(array);
     
-    console.log("occurences array")
-    console.log(array.length)
-    console.log("occurences set")
-    console.log(setOccurences.size)
     return array.length === setOccurences.size
     
 };
