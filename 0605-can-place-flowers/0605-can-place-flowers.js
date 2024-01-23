@@ -14,7 +14,8 @@ var canPlaceFlowers = function(flowerbed, n) {
             possible++; 
             i++
         } 
+        if( possible >= n) return true
     }
     
-    return possible >= n;
+    return false;
 };
