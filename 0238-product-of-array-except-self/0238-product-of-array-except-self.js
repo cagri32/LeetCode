@@ -13,5 +13,5 @@ var productExceptSelf = function(nums) {
         if(acc.length !==nums.length) {acc.push(curr * lastItem)}
         return acc
     },[1])
-    return backward.reverse().map((value, index) => value * forward[index]);
+    return forward.map((value, index) => value * backward[backward.length-1-index]);
 };
