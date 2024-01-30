@@ -8,7 +8,7 @@ var productExceptSelf = function(nums) {
         if(acc.length !==nums.length) {acc.push(curr * lastItem)}
         return acc
     },[1])
-    let backward = nums.reverse().reduce((acc, curr)=> {
+    let backward = nums.reduceRight((acc, curr)=> {
         let lastItem = acc.length !== 0 ? acc[acc.length-1] : 1
         if(acc.length !==nums.length) {acc.push(curr * lastItem)}
         return acc
